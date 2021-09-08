@@ -10,6 +10,9 @@
 
     {{-- css --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <style>
+        {{ $css ?? '' }}
+    </style>
 
     {{-- bootstrap icon --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -19,17 +22,21 @@
 </head>
 
 <body class="font-sans antialiased">
-    <header>
+    <header class="max-w-full w-screen fixed">
         <x-header-nav />
     </header>
     <div class="flex flex-row">
-        <div class="hidden md:block">
+        <div class="hidden mt-16 md:block">
             <x-sidepanel-nav />
         </div>
-        <div class="ml-60">
+        <div class="ml-0 mt-16 w-full md:ml-60">
             {{ $slot }}
         </div>
     </div>
 </body>
+
+<script>
+    {{ $js ?? '' }}
+</script>
 
 </html>

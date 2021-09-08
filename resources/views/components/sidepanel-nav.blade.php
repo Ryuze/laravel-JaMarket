@@ -9,7 +9,7 @@
             left-0
         ">
     <div class="bg-black bg-opacity-50 border border-black">
-        <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="photo-profile"
+        <img src="https://avatars.dicebear.com/api/initials/Jermain Johns.svg" alt="photo-profile"
             class="rounded-full h-12 w-12 items-center mx-auto m-2" />
         <p class="text-center font-bold mb-2">Jermain Johns</p>
     </div>
@@ -20,14 +20,14 @@
         <ul>
             <li
                 class="
-                        text-gray-400 text-lg
+                        text-lg
                         font-bold
                         border-0
                         rounded-md
                         transition
                         ease-in-out
                         duration-150
-                        hover:bg-gray-500 hover:text-gray-100
+                        {{ strpos(url()->current(), 'product') !== false ? 'bg-gray-500 text-gray-100' : 'text-gray-400 hover:bg-gray-500 hover:text-gray-100' }}
                     ">
                 <a href="{{ route('product.index') }}">
                     <p class="ml-4 py-1">
@@ -70,10 +70,10 @@
                         duration-150
                         hover:bg-gray-500 hover:text-gray-100
                     ">
-                <Link href="#">
-                <p class="ml-4 py-1">
-                    <i class="bi bi-people pl-1"></i> Users
-                </p>
+                <a href="#">
+                    <p class="ml-4 py-1">
+                        <i class="bi bi-people pl-1"></i> Users
+                    </p>
                 </a>
             </li>
         </ul>

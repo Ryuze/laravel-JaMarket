@@ -1,19 +1,21 @@
 <div id="header" class="shadow">
-    <div class="max-w-full mx-auto px-4">
+    <div class="max-w-full mx-auto px-4 bg-white">
         <div class="flex flex-row justify-between ml-4 mr-4">
             <div class="my-auto relative inline-block">
-                <div class="flex flex-row">
-                    <img src="https://vuejs.org/images/logo.svg" alt="logo" class="h-8 w-auto mt-4 mb-4" />
-                    <p class="my-auto text-center ml-2 text-xl font-bold">
-                        Logo
-                    </p>
-                </div>
+                <a href="{{ route('dashboard') }}">
+                    <div class="flex flex-row">
+                        <img src="https://vuejs.org/images/logo.svg" alt="logo" class="h-8 w-auto mt-4 mb-4" />
+                        <p class="my-auto text-center ml-2 text-xl font-bold">
+                            Logo
+                        </p>
+                    </div>
+                </a>
             </div>
             <div class="flex flex-row relative">
                 <input type="text"
                     class="
                         my-auto
-                        rounded-md
+                        rounded-l-md
                         w-screen
                         hidden
                         md:block md:max-w-md
@@ -32,6 +34,22 @@
                         hover:shadow-md
                     "
                     placeholder="Search here" />
+                    {{-- TODO: form pasang disini sama tombol submit buat livesearch --}}
+                <div
+                    class="
+                        my-auto
+                        border border-gray-400 border-opacity-10
+                        px-2 py-2
+                        hidden
+                        md:block
+                        rounded-r-md
+                        text-gray-500
+                        bg-gray-50
+                        shadow-sm
+                        hover:shadow-md
+                        ">
+                        <i class="bi bi-search"></i>
+                </div>
             </div>
             <div class="my-auto relative inline-block" x-data="{ isOpen: false }">
                 <div class="flex flex-row">
@@ -44,7 +62,8 @@
                         </div>
                     </x-button>
                 </div>
-                <div x-show="isOpen" x-transition:enter="transition duration-200 ease-out"
+                <div x-show="isOpen" 
+                    x-transition:enter="transition duration-200 ease-out"
                     x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
                     x-transition:leave="transition duration-200 ease-in" x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0"
@@ -62,7 +81,7 @@
                         ">
                     <div class="py-1">
                         <div class="border-b-2 border-gray-200 mb-2">
-                            <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="photo-profile"
+                            <img src="https://avatars.dicebear.com/api/initials/Jermain Johns.svg" alt="photo-profile"
                                 class="
                                         rounded-full
                                         h-12
@@ -88,7 +107,9 @@
                                     py-2
                                     text-sm
                                     hover:bg-gray-100
-                                ">asd</a>
+                                ">
+                            asd
+                        </a>
                         <a href="#"
                             class="
                                     text-gray-700
@@ -97,7 +118,9 @@
                                     py-2
                                     text-sm
                                     hover:bg-gray-100
-                                ">qwe</a>
+                                ">
+                            qwe
+                        </a>
                     </div>
                 </div>
             </div>
