@@ -41,7 +41,7 @@ class ProductController extends Controller
             'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048'
         ]);
 
-        if ($validated['image']) {
+        if (isset($validated['image'])) {
             $path = $validated['image']->store('public/products');
             $validated['image'] = $path;
         }

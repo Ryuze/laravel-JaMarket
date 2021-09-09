@@ -1,6 +1,6 @@
 <div>
     <div class="rounded overflow-hidden shadow-lg">
-        <img class="w-full" src="{{ asset('storage/default/default_product.jpg') }}" alt="">
+        <img class="w-full" src="{{ asset($image) }}" alt="Product image">
         <div class="px6 py-4">
             <div class="font-bold text-xl ml-4 truncate">{{ $name }}</div>
             <p class="text-gray-700 text-base ml-4">

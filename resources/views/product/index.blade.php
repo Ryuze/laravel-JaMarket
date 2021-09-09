@@ -22,10 +22,6 @@
                 product</a>
         </div>
 
-        {{-- cardview disini --}}
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-5">
-            <x-card :name="'Nama barang'" :price="5000" />
-        </div>
-
+        <livewire:product-dashboard />
     </div>
 </x-dashboard-layout>
